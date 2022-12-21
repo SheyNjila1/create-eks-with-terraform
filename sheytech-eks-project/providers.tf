@@ -16,16 +16,13 @@ terraform {
   bucket                    = "sheytech-eks-project-state-store"
   key                       = "state/terraform.tf.state-locking"
   region                    = "us-east-1"
-  dynamodb_table            = "sheytech-test-locks"
+  dynamodb_table            = "sheytech-eks-project-state-locking"
   encrypt                   = false
-  s3_versioning             = "Enabled"
-  enable_lifecycle_rule     = false
+  #s3_versioning             = "Enabled"
+  #enable_lifecycle_rule     = false
   # profile                   = "default"
 }
 }
-
-
-
 
 provider "aws" {
   region = "us-east-1"

@@ -1,6 +1,8 @@
 # --- networking/main.tf ---
 
-data "aws_availability_zones" "available" {}
+data "aws_availability_zones" "available" {
+   exclude_names = ["us-east-1e"]
+}
 
 resource "random_integer" "random" {
   min = 1
